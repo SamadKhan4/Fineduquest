@@ -240,7 +240,7 @@ width:42px;
 .program-content{
 position:absolute;
 left:10%;
-top:21%;
+top:25%;
 z-index:3;
 max-width:620px;
 }
@@ -277,7 +277,7 @@ max-width:1040px;
 }
 
 .program-content h1 span{
-font-size:58px;
+font-size:48px;
 }
 
 .program-text{
@@ -306,20 +306,20 @@ width:95%;
 
 .program-content{
 left:7%;
-top:22.5%;
+top:25.5%;
 max-width:190px;
 }
 
 .program-content h1 span{
-font-size:31px;
-line-height:.98;
+font-size:25px;
+line-height:.95;
 letter-spacing:-.4px;
 }
 
 .program-text{
 margin-top:18px;
 max-width:190px;
-font-size:9px;
+font-size:10px;
 line-height:1.22;
 }
 

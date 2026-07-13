@@ -886,7 +886,7 @@
 
     .hero-title-font span {
       display: block;
-      font-size: 28px;
+      font-size: 22px;
     }
 
     .text-black {
@@ -1311,6 +1311,18 @@
       }
     }
 
+    @media (min-width: 769px) and (max-width: 1200px) {
+      .hero-title-font span {
+        font-size: 46px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title-font span {
+        font-size: 36px;
+      }
+    }
+
 
     /* ================= PURPOSE SECTION CSS START ================= */
 
@@ -1509,6 +1521,8 @@
   width: 100%;
   display: flex;
   opacity: 0;
+  color: inherit;
+  text-decoration: none;
 }
 
 .initiatives-left {
@@ -2703,7 +2717,8 @@
 }
 
 .partner-logo{
-    height:170px;
+    width:180px;
+    height:120px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -2712,36 +2727,10 @@
 }
 
 .partner-logo img{
+    width:160px;
+    height:95px;
     object-fit:contain;
     display:block;
-    max-width:none;
-}
-
-/* Individual Logo Sizes */
-
-.logo1 img{
-    height:155px;
-    width:auto;
-}
-
-.logo2 img{
-    height:95px;
-    width:160px;
-}
-
-.logo3 img{
-    height:120px;
-    width:230px;
-}
-
-.logo4 img,
-.logo5 img,
-.logo6 img,
-.logo7 img,
-.logo8 img,
-.logo9 img{
-    height:95px;
-    width:auto;
 }
 
 /* Infinite Scroll */
@@ -2773,30 +2762,13 @@
     }
 
     .partner-logo{
-        height:122px;
+        width:160px;
+        height:105px;
         margin:0 40px;
     }
 
-    .logo1 img{
-        height:80px;
-    }
-
-    .logo2 img{
-        height:100px;
-        width:190px;
-    }
-
-    .logo3 img{
-        height:105px;
-        width:200px;
-    }
-
-    .logo4 img,
-    .logo5 img,
-    .logo6 img,
-    .logo7 img,
-    .logo8 img,
-    .logo9 img{
+    .partner-logo img{
+        width:140px;
         height:80px;
     }
 
@@ -2817,35 +2789,14 @@
     }
 
     .partner-logo{
+        width:140px;
         height:88px;
         margin:0 24px;
     }
 
     .partner-logo img{
-        max-width:160px;
-    }
-
-    .logo1 img{
-        height:58px;
-    }
-
-    .logo2 img{
-        width:132px;
-        height:66px;
-    }
-
-    .logo3 img{
-        width:140px;
-        height:68px;
-    }
-
-    .logo4 img,
-    .logo5 img,
-    .logo6 img,
-    .logo7 img,
-    .logo8 img,
-    .logo9 img{
-        height:56px;
+        width:120px;
+        height:65px;
     }
 
 }
@@ -2866,35 +2817,14 @@
     }
 
     .partner-logo{
+        width:120px;
         height:74px;
         margin:0 16px;
     }
 
     .partner-logo img{
-        max-width:132px;
-    }
-
-    .logo1 img{
-        height:46px;
-    }
-
-    .logo2 img{
-        width:112px;
+        width:104px;
         height:54px;
-    }
-
-    .logo3 img{
-        width:116px;
-        height:54px;
-    }
-
-    .logo4 img,
-    .logo5 img,
-    .logo6 img,
-    .logo7 img,
-    .logo8 img,
-    .logo9 img{
-        height:44px;
     }
 
 }
@@ -3465,8 +3395,7 @@ font-size:14px;
       <div class="initiatives-card-list">
 
         <!-- Card 1 -->
-      <a href="PHP-Fineduquest/Fineduquest.php" >
-        <div class="initiatives-card-row initiatives-left" style="animation-delay: 0s;">
+        <a href="PHP-Fineduquest/Fineduquest.php" class="initiatives-card-row initiatives-left" style="animation-delay: 0s;" aria-label="Learn more about Fin-Edu Quest">
           <div class="initiatives-card">
             <img
               src="assets/images/1.png"
@@ -3481,11 +3410,11 @@ font-size:14px;
                 A Financial Literacy Olympiad
               </p>
 
-              <a href="PHP-Fineduquest/Fineduquest.php" class="initiatives-link">
+              <span class="initiatives-link">
                 <span>Learn More</span>
                 <span class="initiatives-link-line-one"></span>
                 <span class="initiatives-link-line-two"></span>
-              </a>
+              </span>
             </div>
 
             <img
@@ -3494,12 +3423,10 @@ font-size:14px;
               class="initiatives-hover-img"
             />
           </div>
-        </div>
-       </a>
+        </a>
 
         <!-- Card 2 -->
-        <a href="PHP-Fineduquest/MoneyMastrey.php" >
-        <div class="initiatives-card-row initiatives-right" style="animation-delay: 0.12s;">
+        <a href="PHP-Fineduquest/MoneyMastrey.php" class="initiatives-card-row initiatives-right" style="animation-delay: 0.12s;" aria-label="Learn more about Money-Mastery Program">
           <div class="initiatives-card">
             <img
               src="assets/images/2.png"
@@ -3514,11 +3441,11 @@ font-size:14px;
                 Experiential Learning Activity Kit
               </p>
 
-              <a href="PHP-Fineduquest/MoneyMastrey.php" class="initiatives-link">
+              <span class="initiatives-link">
                 <span>Learn More</span>
                 <span class="initiatives-link-line-one"></span>
                 <span class="initiatives-link-line-two"></span>
-              </a>
+              </span>
             </div>
 
             <img
@@ -3527,12 +3454,10 @@ font-size:14px;
               class="initiatives-hover-img"
             />
           </div>
-        </div>
-</a>
+        </a>
 
         <!-- Card 3 -->
-        <a href="PHP-Fineduquest/Awarness.php" >
-        <div class="initiatives-card-row initiatives-left" style="animation-delay: 0.24s;">
+        <a href="PHP-Fineduquest/Awarness.php" class="initiatives-card-row initiatives-left" style="animation-delay: 0.24s;" aria-label="Learn more about Awareness and Impact Initiatives">
           <div class="initiatives-card">
             <img
               src="assets/images/3.png"
@@ -3547,11 +3472,11 @@ font-size:14px;
                 Workshops, Campaigns & Community Outreach
               </p>
 
-              <a href="PHP-Fineduquest/Awarness.php" class="initiatives-link">
+              <span class="initiatives-link">
                 <span>Learn More</span>
                 <span class="initiatives-link-line-one"></span>
                 <span class="initiatives-link-line-two"></span>
-              </a>
+              </span>
             </div>
 
             <img
@@ -3560,11 +3485,9 @@ font-size:14px;
               class="initiatives-hover-img"
             />
           </div>
-        </div>
-</a>
+        </a>
         <!-- Card 4 -->
-        <a href="PHP-Fineduquest/Financials.php" >
-        <div class="initiatives-card-row initiatives-right" style="animation-delay: 0.36s;">
+        <a href="PHP-Fineduquest/Financials.php" class="initiatives-card-row initiatives-right" style="animation-delay: 0.36s;" aria-label="Learn more about Financial-Literacy Publications">
           <div class="initiatives-card">
             <img
               src="assets/images/4.png"
@@ -3579,11 +3502,11 @@ font-size:14px;
                 Professionally Designed NEP-Aligned Books
               </p>
 
-              <a href="PHP-Fineduquest/Financials.php" class="initiatives-link">
+              <span class="initiatives-link">
                 <span>Learn More</span>
                 <span class="initiatives-link-line-one"></span>
                 <span class="initiatives-link-line-two"></span>
-              </a>
+              </span>
             </div>
 
             <img
@@ -3592,7 +3515,6 @@ font-size:14px;
               class="initiatives-hover-img"
             />
           </div>
-        </div>
         </a>
 
       </div>
@@ -3946,7 +3868,6 @@ font-size:14px;
                     <img src="assets/images/sdg1.png" alt="Quality Education">
                 </div>
 
-                <div class="divider"></div>
 
                 <p>
                     Making financial literacy a practical and engaging life skill for students.
@@ -3965,7 +3886,6 @@ font-size:14px;
                     <img src="assets/images/sdg2.png" alt="">
                 </div>
 
-                <div class="divider"></div>
 
                 <p>
                     Equipping children with money management and responsible decision-making skills.
@@ -3984,7 +3904,6 @@ font-size:14px;
                     <img src="assets/images/sdg3.png" alt="">
                 </div>
 
-                <div class="divider"></div>
 
                 <p>
                     Providing early access to financial knowledge for children from all backgrounds.
@@ -4003,7 +3922,6 @@ font-size:14px;
                     <img src="assets/images/sdg4.png" alt="">
                 </div>
 
-                <div class="divider"></div>
 
                 <p>
                     Encouraging mindful spending, saving, and planning from a young age.
@@ -4022,7 +3940,6 @@ font-size:14px;
                     <img src="assets/images/sdg5.png" alt="">
                 </div>
 
-                <div class="divider"></div>
 
                 <p>
                     Collaborating with educators and institutions to scale financial literacy initiatives.
@@ -4289,7 +4206,7 @@ font-size:14px;
 
                 <div class="blog-image">
 
-                    <img src="assets/images/blog1.png" alt="">
+                    <img src="assets/images/b1n.jpeg" alt="">
 
                 </div>
 
@@ -4323,7 +4240,7 @@ font-size:14px;
 
                 <div class="blog-image">
 
-                    <img src="assets/images/blog2.png" alt="">
+                    <img src="assets/images/b2n.jpeg" alt="">
 
                 </div>
 
@@ -4359,7 +4276,7 @@ font-size:14px;
 
                 <div class="blog-image">
 
-                    <img src="assets/images/blog3.png" alt="">
+                    <img src="assets/images/b3n.jpeg" alt="">
 
                 </div>
 

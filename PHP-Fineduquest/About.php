@@ -110,7 +110,7 @@ transform:translateY(0);
 
     .hero-title-font span {
       display: block;
-      font-size: 20px;
+      font-size: 22px;
     }
     
 .hero-left-animate{
@@ -353,7 +353,7 @@ max-width:520px;
 }
 
 .hero-content h1 span{
-font-size:56px;
+font-size:48px;
 }
 
 .hero-content p{
