@@ -501,6 +501,15 @@ width:34px;
 
 }
 
+ @media (max-width: 639px) {
+.discover-btn {
+        min-height: 40px;
+        max-width: 100%;
+        margin-top: clamp(10px, 3vw, 14px);
+        padding-inline: clamp(14px, 4vw, 20px);
+      }
+}
+
 @media(max-width:480px){
 
 .about-hero-wrapper{
@@ -531,7 +540,10 @@ margin-top:8px;
 }
 
 .hero-content .discover-btn{
-margin-top:10px;
+min-height: 40px;
+        max-width: 100%;
+        margin-top: -10px;
+        padding-inline: clamp(14px, 4vw, 20px);
 }
 
 .hero-star-big{

@@ -16,23 +16,41 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <!-- Page CSS -->
 <style>
+   
+    *{
+        box-sizing:border-box;
+    }
+
+    html{
+        scroll-behavior:smooth;
+    }
+
+    body{
+        margin:0;
+        background:#fff;
+        font-family:"Red Hat Display",Arial,sans-serif;
+    }
+
     /*====================================
         REGISTER PAGE
 ====================================*/
 
 .register-page{
     width:100%;
-    min-height:100vh;
-    padding:70px 20px;
+    min-height:calc(100svh - 95px);
+    display:flex;
+    align-items:center;
+    padding:clamp(30px, 5vw, 70px) 20px;
     background:#ffffff;
 }
 
 .register-wrapper{
+    width:100%;
     max-width:1120px;
     margin:auto;
     display:grid;
-    grid-template-columns:460px 1fr;
-    gap:70px;
+    grid-template-columns:minmax(0, 460px) minmax(0, 1fr);
+    gap:clamp(42px, 5vw, 70px);
     align-items:center;
 }
 
@@ -52,8 +70,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 .register-title{
     margin-top:25px;
-    font-family:"Roketto",sans-serif;
-    font-size:52px;
+    font-family:sans-serif;
+    font-size:40px;
     line-height:1.15;
     color:#111;
 }
@@ -72,7 +90,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 }
 
 .register-image{
-    margin-top:45px;
+    margin-top:30px;
 }
 
 .register-image img{
@@ -120,6 +138,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 .form-group input:focus{
     border-color:#007BFF;
     box-shadow:0 0 0 4px rgba(0,123,255,.08);
+}
+
+.form-group input[aria-invalid="true"]{
+    border-color:#E53935;
+    box-shadow:0 0 0 4px rgba(229,57,53,.08);
 }
 
 .error-text{
@@ -176,7 +199,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     display:flex;
 }
 
-.popup-box{
+.popup-overlay .popup-box{
     width:100%;
     max-width:500px;
     background:#fff;
@@ -186,27 +209,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     animation:popupShow .35s ease;
 }
 
-.popup-box img{
+.popup-overlay .popup-box img{
     width:90px;
     margin:auto;
     display:block;
 }
 
-.popup-box h2{
+.popup-overlay .popup-box h2{
     margin-top:24px;
-    font-family:"Roketto",sans-serif;
+    font-family:sans-serif;
     font-size:34px;
     color:#007BFF;
 }
 
-.popup-box p{
+.popup-overlay .popup-box p{
     margin-top:18px;
     font-size:15px;
     line-height:1.7;
     color:#555;
 }
 
-.popup-box button{
+.popup-overlay .popup-box button{
     margin-top:28px;
     border:none;
     background:#FFC928;
@@ -220,7 +243,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     box-shadow:0 4px 0 #111;
 }
 
-.popup-box button:hover{
+.popup-overlay .popup-box button:hover{
     transform:translateY(2px);
     box-shadow:0 2px 0 #111;
 }
@@ -281,6 +304,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 }
 
+@media(min-width:640px){
+    .register-page{
+        min-height:calc(100svh - 105px);
+    }
+}
+
+@media(min-width:768px){
+    .register-page{
+        min-height:calc(100svh - 120px);
+    }
+}
+
+@media(min-width:1024px){
+    .register-page{
+        min-height:calc(100svh - 135px);
+    }
+}
+
 /*====================================
         MOBILE
 ====================================*/
@@ -317,23 +358,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     width:170px;
 }
 
-.popup-box{
+.popup-overlay .popup-box{
     padding:35px 22px;
 }
 
-.popup-box img{
+.popup-overlay .popup-box img{
     width:70px;
 }
 
-.popup-box h2{
+.popup-overlay .popup-box h2{
     font-size:28px;
 }
 
-.popup-box p{
+.popup-overlay .popup-box p{
     font-size:14px;
 }
 
-.popup-box button{
+.popup-overlay .popup-box button{
     width:100%;
 }
 
@@ -393,13 +434,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
             <div class="form-group">
 
-                <label>
+                <label for="schoolName">
                     School Name*
                 </label>
 
                 <input
                 type="text"
                 id="schoolName"
+                name="schoolName"
+                autocomplete="organization"
                 placeholder="School Name"
                 required>
 
@@ -409,13 +452,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
             <div class="form-group">
 
-                <label>
+                <label for="contactPerson">
                     Contact Person*
                 </label>
 
                 <input
                 type="text"
                 id="contactPerson"
+                name="contactPerson"
+                autocomplete="name"
                 placeholder="Contact Person"
                 required>
 
@@ -425,13 +470,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
             <div class="form-group">
 
-                <label>
+                <label for="designation">
                     Designation / Role*
                 </label>
 
                 <input
                 type="text"
                 id="designation"
+                name="designation"
+                autocomplete="organization-title"
                 placeholder="Principal / Teacher"
                 required>
 
@@ -441,20 +488,26 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
             <div class="form-group">
 
-                <label>
+                <label for="phone">
                     Phone Number*
                 </label>
 
                 <input
                 type="tel"
                 id="phone"
+                name="phone"
+                inputmode="numeric"
+                autocomplete="tel"
+                pattern="[0-9]{10}"
                 maxlength="10"
                 placeholder="10 Digit Number"
+                aria-describedby="phoneError"
                 required>
 
                 <small
                 id="phoneError"
-                class="error-text"></small>
+                class="error-text"
+                aria-live="polite"></small>
 
             </div>
 
@@ -534,8 +587,8 @@ const form = document.getElementById("registerForm");
 const submitBtn = document.getElementById("submitBtn");
 const phoneInput = document.getElementById("phone");
 const phoneError = document.getElementById("phoneError");
-const popup = document.getElementById("successPopup");
-const closePopup = document.getElementById("closePopup");
+const successPopup = document.getElementById("successPopup");
+const closeSuccessPopupButton = document.getElementById("closePopup");
 
 /*==================================
         PHONE VALIDATION
@@ -549,10 +602,12 @@ phoneInput.addEventListener("input", function () {
 
         phoneError.textContent =
             "Phone number must be exactly 10 digits";
+        this.setAttribute("aria-invalid", "true");
 
     } else {
 
         phoneError.textContent = "";
+        this.removeAttribute("aria-invalid");
 
     }
 
@@ -582,6 +637,8 @@ form.addEventListener("submit", async function (e) {
 
         phoneError.textContent =
             "Phone number must be exactly 10 digits";
+        phoneInput.setAttribute("aria-invalid", "true");
+        phoneInput.focus();
 
         return;
 
@@ -616,8 +673,9 @@ form.addEventListener("submit", async function (e) {
         form.reset();
 
         phoneError.textContent = "";
+        phoneInput.removeAttribute("aria-invalid");
 
-        popup.classList.add("active");
+        successPopup.classList.add("active");
 
     }
 
@@ -646,11 +704,11 @@ form.addEventListener("submit", async function (e) {
         CLOSE POPUP
 ==================================*/
 
-closePopup.addEventListener("click", function () {
+closeSuccessPopupButton.addEventListener("click", function () {
 
-    popup.classList.remove("active");
+    successPopup.classList.remove("active");
 
-    window.location.href = "index.php";
+    window.location.href = "../index.php";
 
 });
 
@@ -662,7 +720,7 @@ document.addEventListener("keydown", function (e) {
 
     if (e.key === "Escape") {
 
-        popup.classList.remove("active");
+        successPopup.classList.remove("active");
 
     }
 
@@ -672,11 +730,11 @@ document.addEventListener("keydown", function (e) {
     CLICK OUTSIDE POPUP
 ==================================*/
 
-popup.addEventListener("click", function (e) {
+successPopup.addEventListener("click", function (e) {
 
-    if (e.target === popup) {
+    if (e.target === successPopup) {
 
-        popup.classList.remove("active");
+        successPopup.classList.remove("active");
 
     }
 

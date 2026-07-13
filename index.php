@@ -1323,6 +1323,56 @@
       }
     }
 
+    /* Mobile hero: keep the artwork compact and all copy inside the yellow panel. */
+    @media (max-width: 639px) {
+      .hero-wrapper {
+        min-height: 0;
+        padding: 16px 12px 28px;
+      }
+
+      .hero-stage {
+        width: 100%;
+        max-width: 460px;
+        aspect-ratio: 829 / 691;
+      }
+
+      .hero-content {
+        left: 9%;
+        top: 30%;
+        width: 64%;
+        max-width: none;
+      }
+
+      .hero-title-font {
+        line-height: 0.98;
+        letter-spacing: -1px;
+      }
+
+      .hero-title-font span {
+        font-size: clamp(20px, 6.5vw, 28px);
+        white-space: nowrap;
+      }
+
+      .hero-subtitle {
+        margin-top: clamp(7px, 2vw, 10px);
+        max-width: 100%;
+        font-size: clamp(12px, 3.5vw, 15px);
+      }
+
+      .discover-btn {
+        min-height: 40px;
+        max-width: 100%;
+        margin-top: clamp(10px, 3vw, 14px);
+        padding-inline: clamp(14px, 4vw, 20px);
+      }
+
+      .discover-btn span,
+      .discover-btn a {
+        font-size: clamp(13px, 3.8vw, 16px);
+        white-space: nowrap;
+      }
+    }
+
 
     /* ================= PURPOSE SECTION CSS START ================= */
 
@@ -3332,9 +3382,9 @@ font-size:14px;
             Right from <strong>Class 1</strong>
           </h2>
 
-          <button class="discover-btn" type="button" data-link="Fineduquest.php">
-            <span><a href="PHP-Fineduquest/Fineduquest.php">Discover what we do</a></span>
-          </button>
+          <a class="discover-btn" href="PHP-Fineduquest/Fineduquest.php">
+            <span>Discover what we do</span>
+          </a>
         </div>
       </div>
     </div>

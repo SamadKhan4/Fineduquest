@@ -428,7 +428,7 @@
       display: flex;
     }
 
-    .popup-box {
+    .register-popup .popup-box {
       position: relative;
       width: min(520px, 100%);
       border-top: 4px solid var(--dark-border);
@@ -469,7 +469,7 @@
       transform: rotate(90deg) scale(1.05);
     }
 
-    .popup-box h2 {
+    .register-popup .popup-box h2 {
       max-width: calc(100% - 50px);
       color: var(--dark-border);
       font-family: "Arial Black", Arial, Helvetica, sans-serif;
@@ -477,7 +477,7 @@
       line-height: 1;
     }
 
-    .popup-box p {
+    .register-popup .popup-box p {
       margin-top: 16px;
       color: #333333;
       font-size: 16px;
@@ -817,6 +817,7 @@
   </div>
 
   <script>
+  (() => {
     const header = document.getElementById("siteHeader");
     const headerSpacer = document.getElementById("headerSpacer");
     const fullscreenMenu = document.getElementById("fullscreenMenu");
@@ -913,6 +914,7 @@
 
     handleScroll();
     setActiveLink();
+  })();
   </script>
 </body>
 </html>
