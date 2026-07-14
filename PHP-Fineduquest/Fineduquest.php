@@ -397,18 +397,6 @@ background:#EAF4FF;
 
 }
 
-.circle2{
-
-width:220px;
-height:220px;
-
-left:-90px;
-bottom:-90px;
-
-background:#FFF8E2;
-
-}
-
 .circle3{
 
 width:96px;
@@ -1571,7 +1559,6 @@ font-size:14px;
             <!-- Background Shapes -->
 
             <div class="circle circle1"></div>
-            <div class="circle circle2"></div>
             <div class="circle circle3"></div>
 
             <!-- Header -->

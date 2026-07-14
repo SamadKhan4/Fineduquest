@@ -305,7 +305,7 @@ width:95%;
 }
 
 .program-content{
-left:7%;
+left:9%;
 top:25.5%;
 max-width:190px;
 }

@@ -5,282 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer Component</title>
     <style>
-        .footer{
-            background:#ffffff;
-            padding-top:64px;
+        .footer {
+            background: #ffffff;
+            padding-top: 42px;
         }
 
-        .footer-container{
-            position:relative;
-            overflow:hidden;
-            margin:0 auto;
-            width:100%;
-            background:#2F2F2F;
-            border-radius:38px 38px 0 0;
-            padding:86px 80px 32px;
-            color:#ffffff;
+        .footer-container {
+            width: 100%;
+            overflow: hidden;
+            background: #2b2b2b;
+            border-radius: 38px 38px 0 0;
+            padding: 76px 5.3% 52px;
+            color: #ffffff;
         }
 
-        .footer-sun{
-            position:absolute;
-            top:38px;
-            left:50%;
-            width:93px;
-            transform:translateX(-50%);
+        .footer-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.7fr) minmax(170px, .65fr) minmax(210px, .6fr);
+            gap: 70px;
+            align-items: start;
+            max-width: 1700px;
+            margin: 0 auto;
         }
 
-        .footer-pencil-boy{
-            position:absolute;
-            left:455px;
-            bottom:82px;
-            width:91px;
-            pointer-events:none;
-        }
-
-        .footer-book-boy{
-            position:absolute;
-            right:105px;
-            top:150px;
-            width:102px;
-            pointer-events:none;
-        }
-
-        .footer-grid{
-            display:grid;
-            grid-template-columns:1.08fr .48fr .7fr;
-            gap:120px;
-            align-items:start;
-            max-width:1240px;
-            margin:0 auto;
-        }
-
-        .footer-cloud-logo{
-            width:134px;
-            margin-bottom:36px;
-        }
-
-        .footer-heading{
-            margin:0 0 20px;
-            font-family:"Arial Black",Arial,Helvetica,sans-serif;
-            font-size:16px;
-            font-weight:900;
-            line-height:1.2;
-            color:#ffffff;
+        .footer-heading {
+            margin: 0 0 20px;
+            color: #ffffff;
+            font-family: "Arial Black", Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 1.2;
         }
 
         .footer-about-text,
-        .footer-contact-text,
-        .footer-links a,
-        .footer-email a{
-            color:#d9d9d9;
-            font-size:15px;
-            line-height:1.45;
-            text-decoration:none;
+        .footer-email a,
+        .footer-links a {
+            color: #eeeeee;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.48;
+            text-decoration: none;
         }
 
-        .footer-about-text{
-            max-width:350px;
-            margin:0 0 26px;
+        .footer-about-text {
+            max-width: 600px;
+            margin: 0 0 27px;
         }
 
-        .footer-email h4,
-        .footer-contact-title{
-            margin:0 0 14px;
-            color:#ffffff;
-            font-family:"Arial Black",Arial,Helvetica,sans-serif;
-            font-size:14px;
-            font-weight:900;
-            line-height:1.2;
+        .footer-email h3 {
+            margin: 0 0 14px;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
         }
 
-        .footer-contact-block + .footer-contact-block{
-            margin-top:26px;
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
         }
 
-        .footer-social{
-            display:flex;
-            gap:9px;
-            margin-top:24px;
+        .footer-social a {
+            display: flex;
+            width: 29px;
+            height: 29px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: transform .25s ease;
         }
 
-        .footer-social a{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            width:22px;
-            height:22px;
-            border-radius:50%;
-            color:#ffffff;
-            font-size:12px;
-            font-weight:800;
-            text-decoration:none;
-            transition:transform .25s ease;
+        .footer-social a:hover { transform: translateY(-3px); }
+        .facebook { background: #1877f2; }
+        .instagram { background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcaf45); }
+        .linkedin { background: #0a66c2; }
+        .twitter { background: #000000; }
+
+        .footer-links ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
         }
 
-        .footer-social a:hover{
-            transform:translateY(-3px);
+        .footer-links li + li { margin-top: 18px; }
+        .footer-links a { transition: color .25s ease; }
+        .footer-links a:hover { color: #ffffff; }
+
+        .footer-image {
+            display: flex;
+            min-height: 265px;
+            align-items: center;
+            justify-content: center;
         }
 
-        .facebook{background:#1877F2;}
-        .instagram{background:linear-gradient(45deg,#833AB4,#FD1D1D,#FCAF45);}
-        .linkedin{background:#0A66C2;}
-        .twitter{background:#000000;}
-
-        .footer-links{
-            padding-top:58px;
+        .footer-image img {
+            display: block;
+            width: 205px;
+            max-width: 100%;
+            object-fit: contain;
         }
 
-        .footer-links ul{
-            list-style:none;
-            margin:0;
-            padding:0;
+        .footer-wave {
+            max-width: 1700px;
+            margin: 55px auto 0;
         }
 
-        .footer-links li + li{
-            margin-top:20px;
+        .footer-wave img {
+            display: block;
+            width: 100%;
+            height: 12px;
+            object-fit: fill;
         }
 
-        .footer-links a{
-            transition:color .25s ease;
+        .footer-bottom {
+            display: flex;
+            max-width: 1700px;
+            margin: 22px auto 0;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 35px;
         }
 
-        .footer-links a:hover{
-            color:#ffffff;
-        }
-
-        .footer-contact{
-            padding-top:58px;
-        }
-
-        .footer-wave{
-            max-width:1240px;
-            margin:70px auto 0;
-        }
-
-        .footer-wave img{
-            display:block;
-            width:100%;
-            height:11px;
-            object-fit:fill;
-        }
-
-        .footer-bottom{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            gap:24px;
-            max-width:1240px;
-            margin:25px auto 0;
-        }
-
-        .footer-policy{
-            display:flex;
-            gap:26px;
-            flex-wrap:wrap;
+        .footer-policy {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
         }
 
         .footer-policy a,
-        .footer-bottom p{
-            color:#ffffff;
-            font-family:"Arial Black",Arial,Helvetica,sans-serif;
-            font-size:11px;
-            font-weight:900;
-            line-height:1.5;
-            text-decoration:none;
+        .footer-bottom p {
+            margin: 0;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.45;
+            text-decoration: none;
         }
 
-        .footer-bottom p{
-            max-width:620px;
-            margin:0;
-            text-align:right;
+        .footer-bottom p {
+            max-width: 590px;
+            text-align: right;
         }
 
-        @media(max-width:1100px){
-            .footer-container{
-                padding:70px 34px 30px;
-            }
-
-            .footer-grid{
-                grid-template-columns:1fr 1fr;
-                gap:54px;
-            }
-
-            .footer-contact{
-                grid-column:1 / -1;
-                padding-top:0;
-            }
-
-            .footer-pencil-boy,
-            .footer-book-boy{
-                display:none;
-            }
+        @media (max-width: 1050px) {
+            .footer-container { padding: 64px 42px 42px; }
+            .footer-grid { grid-template-columns: 1.45fr .65fr .7fr; gap: 40px; }
+            .footer-image img { width: 175px; }
         }
 
-        @media(max-width:768px){
-            .footer{
-                padding-top:40px;
-            }
+        @media (max-width: 768px) {
+            .footer { padding-top: 30px; }
+            .footer-container { border-radius: 25px 25px 0 0; padding: 48px 22px 32px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 42px 28px; }
+            .footer-image { min-height: 0; align-items: flex-end; }
+            .footer-image img { width: 145px; }
+            .footer-wave { margin-top: 42px; }
+            .footer-bottom { flex-direction: column; gap: 18px; }
+            .footer-bottom p { text-align: left; }
+        }
 
-            .footer-container{
-                border-radius:24px 24px 0 0;
-                padding:58px 22px 28px;
-            }
-
-            .footer-sun{
-                width:72px;
-            }
-
-            .footer-grid{
-                grid-template-columns:1fr;
-                gap:36px;
-            }
-
-            .footer-links,
-            .footer-contact{
-                padding-top:0;
-            }
-
-            .footer-wave{
-                margin-top:42px;
-            }
-
-            .footer-bottom{
-                align-items:flex-start;
-                flex-direction:column;
-            }
-
-            .footer-bottom p{
-                text-align:left;
-            }
+        @media (max-width: 520px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-heading { font-size: 17px; }
+            .footer-about-text, .footer-email a, .footer-links a { font-size: 14px; }
+            .footer-image { justify-content: flex-start; }
+            .footer-image img { width: 135px; }
         }
     </style>
 </head>
 <body>
     <footer class="footer">
         <div class="footer-container">
-            <img src="../assets/images/sun.png" alt="" class="footer-sun">
-            <img src="../assets/images/pensil-boy.png" alt="" class="footer-pencil-boy">
-            <img src="../assets/images/book-mascot.png" alt="" class="footer-book-boy">
-
             <div class="footer-grid">
                 <div class="footer-about">
-                    <img src="../assets/images/cloud-logo.png" alt="Financial Education Quest" class="footer-cloud-logo">
-
                     <h2 class="footer-heading">About Company.</h2>
-
                     <p class="footer-about-text">
-                        The only exam in India that incorporates financial literacy from Class 1 to Class 10 is Fin Edu Quest, which helps prepare the next generation for a safe and fulfilling future. EMPOWERING FINANCIAL LITERACY.
+                        The only exam in India that incorporates financial literacy from Class 1 to Class 10 is Fin Edu Quest, which helps prepare the next generation for a safe and fulfilling future. EMPOWERING FINANCIAL LITERACY
                     </p>
-
+                    <div class="footer-email">
+                        <h3>Email Address</h3>
+                        <a href="mailto:fineduquest@gmail.com">fineduquest@gmail.com</a>
+                    </div>
                     <div class="footer-social">
-                        <a href="#" class="facebook">f</a>
-                        <a href="#" class="instagram">&#9678;</a>
-                        <a href="#" class="linkedin">in</a>
-                        <a href="#" class="twitter">X</a>
+                        <a href="#" class="facebook" aria-label="Facebook">f</a>
+                        <a href="#" class="instagram" aria-label="Instagram">◎</a>
+                        <a href="#" class="linkedin" aria-label="LinkedIn">in</a>
+                        <a href="#" class="twitter" aria-label="X">X</a>
                     </div>
                 </div>
 
-                <div class="footer-links">
+                <nav class="footer-links" aria-label="Footer navigation">
                     <h2 class="footer-heading">Quick Links</h2>
                     <ul>
                         <li><a href="index.php">Home</a></li>
@@ -289,28 +210,10 @@
                         <li><a href="Gallery.php">Gallery</a></li>
                         <li><a href="Blog.php">Blog</a></li>
                     </ul>
-                </div>
+                </nav>
 
-                <div class="footer-contact">
-                    <h2 class="footer-heading">Contact</h2>
-
-                    <div class="footer-contact-block">
-                        <h3 class="footer-contact-title">Operational Address:</h3>
-                        <p class="footer-contact-text">
-                            47, Kotwal Nagar, Khamla, Nagpur,<br>
-                            Maharashtra 440022, India
-                        </p>
-                    </div>
-
-                    <div class="footer-contact-block">
-                        <h3 class="footer-contact-title">Email Address</h3>
-                        <p class="footer-contact-text">fineduquest@gmail.com</p>
-                    </div>
-
-                    <div class="footer-contact-block">
-                        <h3 class="footer-contact-title">Phone Number</h3>
-                        <p class="footer-contact-text">+91-7666729015</p>
-                    </div>
+                <div class="footer-image">
+                    <img src="../assets/images/book-mascot.png" alt="Student reading a book">
                 </div>
             </div>
 
@@ -321,12 +224,9 @@
             <div class="footer-bottom">
                 <div class="footer-policy">
                     <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Terms &amp; Conditions</a>
                 </div>
-
-                <p>
-                    Copyright &copy; 2026 Financial Education Quest. All Rights Reserved. Designed by Adbornsolutions.
-                </p>
+                <p>Copyright &copy; 2026 Financial Education Quest. All Rights Reserved. Designed by adbornsolutions.</p>
             </div>
         </div>
     </footer>

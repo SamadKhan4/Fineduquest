@@ -918,7 +918,7 @@
       min-height: 44px;
       border: 0;
       border-radius: 999px;
-      background: #F5BC18;
+      background: #6FF5FD;
       color: #1f1f1f;
       padding: 0 26px;
       cursor: pointer;

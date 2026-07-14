@@ -39,7 +39,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     width:100%;
     min-height:calc(100svh - 95px);
     display:flex;
-    align-items:center;
+    align-items:flex-start;
     padding:clamp(30px, 5vw, 70px) 20px;
     background:#ffffff;
 }
@@ -47,7 +47,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 .register-wrapper{
     width:100%;
     max-width:1120px;
-    margin:auto;
+    margin:0 auto;
     display:grid;
     grid-template-columns:minmax(0, 460px) minmax(0, 1fr);
     gap:clamp(42px, 5vw, 70px);
@@ -319,6 +319,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 @media(min-width:1024px){
     .register-page{
         min-height:calc(100svh - 135px);
+        padding-top:10px;
     }
 }
 

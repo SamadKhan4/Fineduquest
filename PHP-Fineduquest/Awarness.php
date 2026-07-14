@@ -384,16 +384,41 @@ main{
     }
 
     .journey-grid{
-        grid-template-columns:repeat(4,1fr);
-        row-gap:34px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        width:100%;
+        max-width:920px;
+        height:auto;
+        margin:0 auto;
+        gap:30px 16px;
     }
 
     .journey-grid::before{
         display:none;
     }
 
-    .journey-card:nth-child(even){
-        padding-top:0;
+    .journey-card,
+    .journey-card:nth-child(n){
+        flex:0 1 calc(25% - 12px);
+        min-width:150px;
+        min-height:128px;
+        padding:12px 6px;
+        transform:none;
+    }
+
+    .journey-card h3,
+    .journey-card:nth-child(3) h3,
+    .journey-card:nth-child(6) h3{
+        margin:14px auto 0;
+    }
+
+    .journey-section{
+        padding:72px 0 68px;
+    }
+
+    .journey-section .section-heading{
+        margin-bottom:44px;
     }
 }
 
@@ -430,6 +455,72 @@ main{
     .journey-grid,
     .development-grid{
         grid-template-columns:1fr;
+    }
+
+    .journey-section{
+        padding:58px 0 64px;
+    }
+
+    .journey-section .section-heading{
+        margin-bottom:34px;
+    }
+
+    .journey-grid{
+        display:grid;
+        width:100%;
+        max-width:340px;
+        height:auto;
+        margin:0 auto;
+        padding:0 12px;
+        gap:0;
+    }
+
+    .journey-grid::before{
+        display:block;
+        left:50px;
+        right:auto;
+        top:48px;
+        bottom:48px;
+        width:0;
+        height:auto;
+        border-left:2px dashed rgba(22,113,222,.42);
+        background:none;
+    }
+
+    .journey-card,
+    .journey-card:nth-child(n){
+        display:grid;
+        min-width:0;
+        grid-template-columns:76px minmax(0,1fr);
+        align-items:center;
+        gap:18px;
+        min-height:112px;
+        padding:12px 0;
+        text-align:left;
+        transform:none;
+    }
+
+    .journey-card .circle{
+        position:relative;
+        z-index:2;
+        margin:0;
+    }
+
+    .journey-card .count{
+        left:-8px;
+        top:-10px;
+        width:27px;
+        height:27px;
+        font-size:12px;
+    }
+
+    .journey-card h3,
+    .journey-card:nth-child(3) h3,
+    .journey-card:nth-child(6) h3{
+        max-width:none;
+        margin:0;
+        font-size:16px;
+        line-height:1.35;
     }
 
     .kit-card,

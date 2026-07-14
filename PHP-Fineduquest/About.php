@@ -851,13 +851,10 @@ box-shadow:0 0 0 5px rgba(245,188,24,.18);
                 <p class="Ptag hero-fade-up hero-delay-4">
                     Fineduquest empowers kids with literacy and life skills to
                     build confidence, make smart choices,
-                    <br>
                     and create a better tomorrow.
                 </p>
 
-                <a href="#fin-edu-quest" class="discover-btn hero-fade-up hero-delay-5">
-    <span>Discover what we do</span>
-</a>
+                
 
             </div>
 
